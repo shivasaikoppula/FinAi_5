@@ -7,3 +7,17 @@
   base = "client"
   command = "npm ci && npm run build"
   publish = "client/build"
+
+[build]
+  command = "cd client && npm ci && npm run build"
+  publish = "client/build"
+  functions = "functions"
+
+[context.production.environment]
+  NODE_ENV = "production"
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
