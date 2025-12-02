@@ -33,6 +33,8 @@ app.use(express.json({
   }
 }));
 app.use(express.urlencoded({ extended: false }));
+const cors = require('cors');
+app.use(cors({ origin: process.env.ALLOWED_ORIGIN || '*' }));
 
 app.use((req, res, next) => {
   const start = Date.now();
