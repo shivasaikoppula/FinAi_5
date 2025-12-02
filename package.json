@@ -109,6 +109,14 @@
   }
 }
 
+
+
+
+"scripts": {
+  "start": "node index.js",
+  "dev": "nodemon index.js"
+}
+
 "scripts": {
   "dev": "vite",
   "build": "vite build",
