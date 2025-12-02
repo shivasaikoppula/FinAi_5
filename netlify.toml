@@ -3,3 +3,7 @@
   publish = "client/dist"
   node_version = "18"
 
+[build]
+  base = "client"
+  command = "npm ci && npm run build"
+  publish = "client/build"
